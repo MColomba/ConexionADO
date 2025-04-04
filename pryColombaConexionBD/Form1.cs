@@ -16,27 +16,37 @@ namespace pryColombaConexionBD
         public Form1()
         {
             InitializeComponent();
+            
+        }
+
+        public void ArmaLvwProductos()
+        {
+            lvw.Columns.Clear();
+            lvw.Columns.Add("Nombre");
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            ArmaLvwProductos();
             try
             {
                 clsConexionBD c = new clsConexionBD();
 
-                string query ="SELECT Nombre FROM Productos";
-              
-                    SqlCommand command = new SqlCommand(query,c.connection);
-                    using (SqlDataReader reader = command.ExecuteReader())
+                string query = "SELECT Nombre FROM Productos";
+
+                SqlCommand command = new SqlCommand(query, c.connection);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
                     {
-                        while (reader.Read())
-                        {
-                            MessageBox.Show(reader["Nombre"].ToString());
-                        }
+                        lvw.Items.Add(reader["Nombre"].ToString());
                     }
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
-
         }
     }
 }
