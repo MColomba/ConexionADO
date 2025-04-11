@@ -45,7 +45,7 @@
             // 
             // btnProductos
             // 
-            this.btnProductos.Location = new System.Drawing.Point(85, 12);
+            this.btnProductos.Location = new System.Drawing.Point(238, 30);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(75, 43);
             this.btnProductos.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // btnContactos
             // 
-            this.btnContactos.Location = new System.Drawing.Point(620, 12);
+            this.btnContactos.Location = new System.Drawing.Point(319, 30);
             this.btnContactos.Name = "btnContactos";
             this.btnContactos.Size = new System.Drawing.Size(75, 44);
             this.btnContactos.TabIndex = 2;

@@ -10,16 +10,16 @@ namespace pryColombaConexionBD
 {
     internal class clsConexionBD
     {
-        public string connectionString = "Server=localhost;Database=Comercio;Trusted_Connection=True;";
-        public SqlConnection connection { get; set; }
+        public string strConnection = "Server=localhost;Database=Comercio;Trusted_Connection=True;";
+        public SqlConnection objConnection { get; set; }
 
         public clsConexionBD()
         {
-            connection = new SqlConnection(connectionString);
+            objConnection = new SqlConnection(strConnection);
             
                 try
                 {
-                    connection.Open();
+                    objConnection.Open();
                     MessageBox.Show("✅ Conexión exitosa a la base de datos.");
                 }
                 catch (Exception ex)

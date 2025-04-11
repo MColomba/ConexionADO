@@ -38,16 +38,16 @@ namespace pryColombaConexionBD
             ArmaLvwProductos();
             try
             {
-                clsConexionBD c = new clsConexionBD();
+                clsConexionBD objConnection = new clsConexionBD();
 
-                string query = "SELECT Nombre FROM Productos";
+                string strQuery = "SELECT Nombre FROM Productos";
 
-                SqlCommand command = new SqlCommand(query, c.connection);
-                using (SqlDataReader reader = command.ExecuteReader())
+                SqlCommand objCommand = new SqlCommand(strQuery, objConnection.connection);
+                using (SqlDataReader reader = objCommand.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        lvw.Items.Add(reader["Nombre"].ToString());
+                        lvw.Items.Add("Nombre", reader["Nombre"].ToString(), null);
                     }
                 }
             }
@@ -62,12 +62,12 @@ namespace pryColombaConexionBD
             ArmaLvwContactos();
             try
             {
-                clsConexionBD c = new clsConexionBD();
+                clsConexionBD objConnection = new clsConexionBD();
 
-                string query = "SELECT * FROM Contactos";
+                string strQuery = "SELECT * FROM Contactos";
 
-                SqlCommand command = new SqlCommand(query, c.connection);
-                using (SqlDataReader reader = command.ExecuteReader())
+                SqlCommand objCommand = new SqlCommand(strQuery, objConnection.connection);
+                using (SqlDataReader reader = objCommand.ExecuteReader())
                 {
                     while (reader.Read())
                     {
