@@ -16,7 +16,6 @@ namespace pryColombaConexionBD
         public frmComercio()
         {
             InitializeComponent();
-            
         }
 
         public void ArmaLvwProductos()
