@@ -1,6 +1,6 @@
 ﻿namespace pryColombaConexionBD
 {
-    partial class Form1
+    partial class frmComercio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -62,7 +62,7 @@
             this.btnContactos.Text = "Consultar Contactos";
             this.btnContactos.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // frmComercio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,8 +70,8 @@
             this.Controls.Add(this.btnContactos);
             this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.lvw);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmComercio";
+            this.Text = "Comercio";
             this.ResumeLayout(false);
 
         }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace pryColombaConexionBD
 {
-    public partial class Form1 : Form
+    public partial class frmComercio : Form
     {
-        public Form1()
+        public frmComercio()
         {
             InitializeComponent();
             
