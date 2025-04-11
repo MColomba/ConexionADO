@@ -61,6 +61,7 @@
             this.btnContactos.TabIndex = 2;
             this.btnContactos.Text = "Consultar Contactos";
             this.btnContactos.UseVisualStyleBackColor = true;
+            this.btnContactos.Click += new System.EventHandler(this.btnContactos_Click);
             // 
             // frmComercio
             // 
