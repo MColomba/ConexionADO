@@ -42,7 +42,7 @@ namespace pryColombaConexionBD
 
                 string strQuery = "SELECT Nombre FROM Productos";
 
-                SqlCommand objCommand = new SqlCommand(strQuery, objConnection.objConnection);
+                SqlCommand objCommand = new SqlCommand(strQuery, objConnection.GetConnection());
                 using (SqlDataReader reader = objCommand.ExecuteReader())
                 {
                     while (reader.Read())
@@ -66,7 +66,7 @@ namespace pryColombaConexionBD
 
                 string strQuery = "SELECT * FROM Contactos";
 
-                SqlCommand objCommand = new SqlCommand(strQuery, objConnection.objConnection);
+                SqlCommand objCommand = new SqlCommand(strQuery, objConnection.GetConnection());
                 using (SqlDataReader reader = objCommand.ExecuteReader())
                 {
                     while (reader.Read())

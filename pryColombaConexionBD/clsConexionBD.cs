@@ -10,8 +10,8 @@ namespace pryColombaConexionBD
 {
     internal class clsConexionBD
     {
-        public string strConnection = "Server=localhost;Database=Comercio;Trusted_Connection=True;";
-        public SqlConnection objConnection { get; set; }
+        private string strConnection = "Server=localhost;Database=Comercio;Trusted_Connection=True;";
+        private SqlConnection objConnection;
 
         public clsConexionBD()
         {
@@ -27,6 +27,10 @@ namespace pryColombaConexionBD
                     MessageBox.Show("❌ Error al conectar: " + ex.Message);
                 }
             
+        }
+        public SqlConnection GetConnection()
+        {
+            return objConnection;
         }
     }
 }
